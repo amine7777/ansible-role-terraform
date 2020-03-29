@@ -1,0 +1,11 @@
+---
+- name: Download terraform
+  get_url:
+    url: "{{ terraform_download_url }}"
+    dest: /tmp
+    mode: '0644'
+
+- name: Extract terraform into {{ terraform_path }}
+  unarchive:
+    src: "{{ terraform_zip_path }}"
+    dest: "{{ terraform_path}}"
