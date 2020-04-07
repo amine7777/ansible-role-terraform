@@ -5,7 +5,7 @@ This playbook is an easy way to install Terraform with just adding the last vers
 You need to have a Linux OS.
 You need to have Ansible already installed.
 
-Please copy and paste this command
+Please copy and paste these commands
 
 ```bash
 git clone https://github.com/amine7777/install_terraform
