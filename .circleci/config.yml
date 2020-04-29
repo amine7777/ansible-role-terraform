@@ -7,7 +7,6 @@ jobs:
       - checkout
       - run: |
           cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
-          cd install_terraform
           ansible-playbook deploy_terraform.yaml -e "terraform_version=0.12.23"
 workflows:
   version: 2
