@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ansible/ansible:centos7
+    steps:
+      - checkout
+      - run: |
+          cd install_terraform
+          ansible-playbook deploy_terraform.yaml -e "terraform_version=0.12.23"
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+  
