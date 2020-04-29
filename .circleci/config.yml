@@ -6,6 +6,7 @@ jobs:
     steps:
       - checkout
       - run: |
+          yum install epel-release -y
           yum install ansible -y
           cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
           ansible-playbook deploy_terraform.yaml -e "terraform_version=0.12.23"
