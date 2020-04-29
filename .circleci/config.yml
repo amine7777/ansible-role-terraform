@@ -2,10 +2,16 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ansible/ansible:centos7
+      - image: centos:7
     steps:
       - checkout
       - run: |
+          yum update -y
+          yum install epel-release -y
+          python -v
+          yum install python-pip -y
+          yum install ansible -y
+          ansible --version
           cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
           ansible-playbook deploy_terraform.yaml -e "terraform_version=0.12.23"
 workflows:
