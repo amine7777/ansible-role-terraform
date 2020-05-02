@@ -1,6 +1,6 @@
 # Install Terraform [![amine7777](https://circleci.com/gh/amine7777/install_terraform.svg?style=svg)](https://circleci.com/gh/amine7777/install_terraform)
 -------------------------------------------------------------------------------------------
-![](terrafom.jpg)
+![](terraform.jpg)
 
 This playbook is an easy way to install Terraform with just adding the last version.
 
