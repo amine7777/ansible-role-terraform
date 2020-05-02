@@ -1,5 +1,7 @@
-# install_terraform [![amine7777](https://circleci.com/gh/amine7777/install_terraform.svg?style=svg)](https://circleci.com/gh/amine7777/install_terraform)
+# Install Terraform [![amine7777](https://circleci.com/gh/amine7777/install_terraform.svg?style=svg)](https://circleci.com/gh/amine7777/install_terraform)
 -------------------------------------------------------------------------------------------
+![Image description](terrafom.jpg)
+
 This playbook is an easy way to install Terraform with just adding the last version.
 
 You need to have a Linux OS.
