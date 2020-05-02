@@ -12,7 +12,7 @@ jobs:
           yum install unzip -y
           ssh-keygen -t rsa -f $HOME/.ssh/id_rsa_ansible -q -P ""
           cat ~/.ssh/id_rsa_ansible.pub >> ~/.ssh/authorized_keys
-          ansible-playbook deploy_terraform.yaml -e "terraform_version=0.12.23"
+          ansible-playbook deploy_terraform.yaml -e "terraform_version=0.12.24"
           terraform --version
 workflows:
   version: 2
