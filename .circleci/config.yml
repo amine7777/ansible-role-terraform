@@ -8,7 +8,7 @@ jobs:
       - run: |
           yum install epel-release -y
           yum install ansible -y
-          yum install openssh
+          yum install openssh -y
           ssh-keygen -t rsa -f $HOME/.ssh/id_rsa_ansible -q -P ""
           cat ~/.ssh/id_rsa_ansible.pub >> ~/.ssh/authorized_keys
           ansible-playbook deploy_terraform.yaml -e "terraform_version=0.12.23"
