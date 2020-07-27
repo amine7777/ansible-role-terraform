@@ -1,4 +1,9 @@
 ---
+- name: Install unzip
+  package:
+    name: unzip
+    state: present
+    
 - name: Download terraform
   get_url:
     url: "{{ terraform_download_url }}"
