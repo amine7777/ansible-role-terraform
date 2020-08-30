@@ -17,7 +17,7 @@ Requirements
 
 Role Variables
 --------------
-These variables helps to manage packer installation.
+These variables helps to manage terraform installation.
 
 You can specify your terraform version in this variable.
 ```yaml
