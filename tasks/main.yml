@@ -5,7 +5,7 @@
     name: unzip
     state: present
 
-- name: Download and extract packer
+- name: Download and extract terraform
   unarchive:
     src: '{{ terraform_download_url }}'
     dest: '{{ terraform_directory_path }}'
