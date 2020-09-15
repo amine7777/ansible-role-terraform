@@ -14,7 +14,7 @@ jobs:
     steps:
       - checkout
       - run: |
-           sudo apt-get update -y
+          sudo apt-get update -y
           sudo apt-get install python -y
           sudo apt-get install python-pip -y
           pip install --upgrade pip
