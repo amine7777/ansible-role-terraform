@@ -14,8 +14,8 @@ jobs:
     steps:
       - checkout
       - run: |
-          sudo apt update
           sudo add-apt-repository ppa:deadsnakes/ppa
+          sudo apt update
           sudo apt install python3.8
           sudo apt install pyMOLECULE_DISTROthon3-pip
           pip3 install --upgrade pip
