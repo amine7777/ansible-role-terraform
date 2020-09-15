@@ -2,7 +2,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: circleci/python:3.7.5
+      - image: docker:dind
     steps:
       - checkout
       - run: |
