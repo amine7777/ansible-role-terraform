@@ -2,14 +2,10 @@ version: 2
 jobs:
   test:
     docker:
-      - image: docker:dind
-    steps:
+      - image: circleci/buildpack-deps:stable-dind
       - checkout
       - run: |
-          apk update
-          apk add build-base
-          apk add py3-setuptools
-          apk add --update py3-pip
+          uname -a
           pip3 install docker==3.4.1 --user
           pip3 install molecule ansible-lint yamllint --user
           molecule test
