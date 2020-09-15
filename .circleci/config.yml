@@ -6,6 +6,8 @@ jobs:
     steps:
       - checkout
       - run: |
+          apk update
+          apk add --update py-pip
           pip3 install docker==3.4.1 --user
           pip3 install molecule ansible-lint yamllint --user
           molecule test
