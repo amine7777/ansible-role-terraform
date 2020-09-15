@@ -5,7 +5,6 @@ jobs:
       - image: circleci/buildpack-deps:stable-dind
       - checkout
       - run: |
-          uname -a
           pip3 install docker==3.4.1 --user
           pip3 install molecule ansible-lint yamllint --user
           molecule test
