@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          apk updateapk 
+          apk update
           apk add build-base
           apk add py3-setuptools
           apk add --update py3-pip
