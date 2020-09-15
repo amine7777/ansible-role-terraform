@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run: |
           yum install epel-release -y
-          yum install python3 python3-pip
+          yum install python3 python3-pip -y
           pip3 install docker==3.4.1
           pip3 install molecule ansible-lint yamllint
 workflows:
