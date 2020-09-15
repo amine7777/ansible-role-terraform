@@ -12,7 +12,9 @@ jobs:
           pip install --upgrade pip
           pip install docker==3.4.1
           pip install molecule ansible-lint yamllint
-          ANSIBLE_ROLES_PATH= ~/project/ molecule test      
+          mv ~/project/ ansible-role-terraform
+          cd ansible-role-terraform
+          molecule test      
 workflows:
   version: 2
   build_and_test:
