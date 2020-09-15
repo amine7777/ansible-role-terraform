@@ -10,17 +10,17 @@ galaxy_info:
   min_ansible_version: 2.0
   platforms:
   - name: EL
-    versions:
-    - all
+      versions:
+        - all
   - name: Fedora
-    versions:
-    - all
+      versions:
+        - all
   - name: Debian
-    versions:
-    - all
+      versions:
+        - all
   - name: Ubuntu
-    versions:
-    - all
+      versions:
+        - all
   galaxy_tags:
     - system
     - image
