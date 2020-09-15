@@ -14,7 +14,7 @@ jobs:
           pip install molecule ansible-lint yamllint
           mkdir ~/ansible-role-terraform
           mv ~/project/ ~/ansible-role-terraform
-          cd ~ansible-role-terraform
+          cd ~/ansible-role-terraform
           molecule test      
 workflows:
   version: 2
