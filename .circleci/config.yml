@@ -6,9 +6,10 @@ jobs:
     steps:
       - checkout
       - run: |
-          uname -a
+          pip install --upgrade pip
           pip install docker==3.4.1 --user
           pip install molecule ansible-lint yamllint --user
+          ls -la -F
           molecule test
 workflows:
   version: 2
