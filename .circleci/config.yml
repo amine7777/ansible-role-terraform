@@ -13,9 +13,7 @@ jobs:
       - DISTRO: debian9
     steps:
       - checkout
-      - run:
-          name: Test molecule
-          command: |
+      - run: |
           sudo apt update
           sudo add-apt-repository ppa:deadsnakes/ppa
           sudo apt install python3.8
