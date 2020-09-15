@@ -14,15 +14,12 @@ jobs:
     steps:
       - checkout
       - run: |
-          sudo apt install -y build-essential wget zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev
-          sudo apt-get install software-properties-common 
-          sudo add-apt-repository ppa:deadsnakes/ppa -y
            sudo apt-get update -y
-          sudo apt-get install python3.6 -y
-          sudo apt-get install python3-pip -y
-          pip3 install --upgrade pip
-          pip3 install docker==3.4.1
-          pip3 install molecule ansible-lint yamllint
+          sudo apt-get install python -y
+          sudo apt-get install python-pip -y
+          pip install --upgrade pip
+          pip install docker==3.4.1
+          pip install molecule ansible-lint yamllint
           mkdir ~/ansible-role-terraform
           mv ~/project/ ~/ansible-role-terraform
           cd ~/ansible-role-terraform          
