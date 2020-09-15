@@ -6,7 +6,8 @@ jobs:
     steps:
       - checkout
       - run: |
-          apk update
+          apk updateapk 
+          apk add build-base
           apk add py3-setuptools
           apk add --update py3-pip
           pip3 install docker==3.4.1 --user
