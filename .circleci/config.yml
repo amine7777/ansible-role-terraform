@@ -7,8 +7,8 @@ jobs:
       - checkout
       - run: |
           uname -a
-          pip3 install docker==3.4.1 --user
-          pip3 install molecule ansible-lint yamllint --user
+          pip install docker==3.4.1 --user
+          pip install molecule ansible-lint yamllint --user
           molecule test
 workflows:
   version: 2
