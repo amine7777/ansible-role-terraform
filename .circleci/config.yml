@@ -23,6 +23,7 @@ jobs:
           mkdir ~/ansible-role-terraform
           mv ~/project/ ~/ansible-role-terraform
           cd ~/ansible-role-terraform
+          ls -la -F
           molecule test      
 workflows:
   version: 2
