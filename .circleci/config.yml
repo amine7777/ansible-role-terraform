@@ -20,6 +20,8 @@ jobs:
           pip install --upgrade pip
           pip install docker==3.4.1
           pip install molecule ansible-lint yamllint
+          cd ..
+          ls -la -F
           MOLECULE_DISTRO=$DISTRO molecule test      
 workflows:
   version: 2
