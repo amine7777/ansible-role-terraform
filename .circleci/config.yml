@@ -4,19 +4,22 @@ jobs:
     machine:
       services: docker
     environment:
-      - MOLECULE_DISTRO: centos8
-      - MOLECULE_DISTRO: centos7
-      - MOLECULE_DISTRO: centos6
-      - MOLECULE_DISTRO: ubuntu1804
-      - MOLECULE_DISTRO: ubuntu1604
-      - MOLECULE_DISTRO: debian10
-      - MOLECULE_DISTRO: debian9
+      - DISTRO: centos8
+      - DISTRO: centos7
+      - DISTRO: centos6
+      - DISTRO: ubuntu1804
+      - DISTRO: ubuntu1604
+      - DISTRO: debian10
+      - DISTRO: debian9
     steps:
       - checkout
-      - run: |
-          sudo apt update 
-          sudo apt install python3
-          sudo apt install python3-pip
+      - run:
+          name: Test molecule
+          command: |
+          sudo apt update
+          sudo add-apt-repository ppa:deadsnakes/ppa
+          sudo apt install python3.8
+          sudo apt install pyMOLECULE_DISTROthon3-pip
           pip3 install --upgrade pip
           pip3 install docker==3.4.1
           pip3 install molecule ansible-lint yamllint
@@ -24,7 +27,7 @@ jobs:
           mv ~/project/ ~/ansible-role-terraform
           cd ~/ansible-role-terraform          
           ls -la -F
-          molecule test      
+          MOLECULE_DISTRO=$DISTRO molecule test      
 workflows:
   version: 2
   build_and_test:
