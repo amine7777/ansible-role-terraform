@@ -12,7 +12,7 @@ jobs:
           pip install --upgrade pip
           pip install docker==3.4.1
           pip install molecule ansible-lint yamllint
-          molecule test
+          ANSIBLE_ROLES_PATH= ~/project/ molecule test      
 workflows:
   version: 2
   build_and_test:
