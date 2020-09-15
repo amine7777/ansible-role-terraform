@@ -22,7 +22,7 @@ jobs:
           pip install molecule ansible-lint yamllint
           mkdir ~/ansible-role-terraform
           cd ..
-          mv ~/project ~/ansible
+          mv ~/project ~/ansible-role-terraform
           cd ~/ansible-role-terraform
           ls -la -F
           MOLECULE_DISTRO=$DISTRO molecule test      
