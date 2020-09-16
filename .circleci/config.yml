@@ -12,8 +12,12 @@ jobs:
           sudo apt-get install python -y
           sudo apt-get install python-pip -y
           pip install --upgrade pip
+          
+      - run: |
           pip install docker==3.4.1
           pip install molecule ansible-lint yamllint
+          
+      - run: |
           mkdir ~/ansible-role-$ROLE_NAME
           cd ..
           mv ~/project/{,.[^.]}* ~/ansible-role-$ROLE_NAME
