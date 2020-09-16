@@ -4,9 +4,9 @@ Ansible role: Terraform
 This role helps you to install terraform on your linux machine.
 
 
-|Travis|GitHub|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/amine7777/ansible-role-terraform.svg?branch=master)](https://travis-ci.com/amine7777/ansible-role-terraform)|[![github](https://github.com/amine7777/ansible-role-terraform/workflows/CI/badge.svg)](https://github.com/amine7777/ansible-role-terraform/actions)|[![quality](https://img.shields.io/ansible/quality/50498)](https://galaxy.ansible.com/amine7777/terraform)|[![downloads](https://img.shields.io/ansible/role/d/50348)](https://galaxy.ansible.com/amine7777/terraform)|[![Version](https://img.shields.io/github/release/amine7777/ansible-role-terraform.svg)](https://github.com/amine7777/ansible-role-terraform/releases/)|
+|Travis|CircleCI|GitHub|Quality|Downloads|Version|
+|------|--------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/amine7777/ansible-role-terraform.svg?branch=master)](https://travis-ci.com/amine7777/ansible-role-terraform)| [![circleci](https://circleci.com/gh/amine7777/ansible-role-terraform.svg?style=svg)|[![github](https://github.com/amine7777/ansible-role-terraform/workflows/CI/badge.svg)](https://github.com/amine7777/ansible-role-terraform/actions)|[![quality](https://img.shields.io/ansible/quality/50498)](https://galaxy.ansible.com/amine7777/terraform)|[![downloads](https://img.shields.io/ansible/role/d/50348)](https://galaxy.ansible.com/amine7777/terraform)|[![Version](https://img.shields.io/github/release/amine7777/ansible-role-terraform.svg)](https://github.com/amine7777/ansible-role-terraform/releases/)|
 
 ![](terraform.jpg)
 
