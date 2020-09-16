@@ -4,13 +4,7 @@ jobs:
     machine:
       services: docker
     environment:
-      - DISTRO: centos8
-      - DISTRO: centos7
-      - DISTRO: centos6
-      - DISTRO: ubuntu1804
-      - DISTRO: ubuntu1604
-      - DISTRO: debian10
-      - DISTRO: debian9
+      - ROLE_NAME: terraform
     steps:
       - checkout
       - run: |
@@ -20,12 +14,11 @@ jobs:
           pip install --upgrade pip
           pip install docker==3.4.1
           pip install molecule ansible-lint yamllint
-          mkdir ~/ansible-role-terraform
+          mkdir ~/ansible-role-$ROLE_NAME
           cd ..
-          mv ~/project/{,.[^.]}* ~/ansible-role-terraform
-          cd ~/ansible-role-terraform
-          ls -la -F
-          MOLECULE_DISTRO=$DISTRO molecule test      
+          mv ~/project/{,.[^.]}* ~/ansible-role-$ROLE_NAME
+          cd ~/ansible-role-$ROLE_NAME
+          molecule test      
 workflows:
   version: 2
   build_and_test:
