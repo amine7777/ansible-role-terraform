@@ -31,6 +31,6 @@ jobs:
             molecule test      
 workflows:
   version: 2
-  molecule-$ROLE_NAME:
+  molecule:
     jobs:
       - test
