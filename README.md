@@ -26,7 +26,7 @@ terraform_arch: amd64
 terraform_directory_path: /usr/local/bin
 ```
 This is the url where terraform will be downloaded.
-```ỳaml
+```yaml
 terraform_download_url: 'https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_{{ terraform_arch }}.zip'
 ```
 This is the path where packer binary will be stored.
