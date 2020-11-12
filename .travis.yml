@@ -12,9 +12,9 @@ env:
     - MOLECULE_DISTRO: fedora32
     
 install:
-  - terraform install docker==3.4.1
-  - terraform install  yamllint ansible-lint
-  - terraform install molecule==3.0.8
+  - pip3 install docker==3.4.1
+  - pip3 install  yamllint ansible-lint
+  - pip3 install molecule==3.0.8
 
 script:
   - molecule test
