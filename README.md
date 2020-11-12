@@ -1,14 +1,14 @@
 Ansible role: Terraform
 =========
 
-This role helps you to install pip3 on your linux machine.
+This role helps you to install terraform on your linux machine.
 
 
 |Travis|GitHubActions|Quality|Downloads|Version|
 |------|-------------|-------|---------|-------|
-|[![travis](https://travis-ci.com/amine7777/ansible-role-pip3.svg?branch=master)](https://travis-ci.com/amine7777/ansible-role-pip3)|[![github](https://github.com/amine7777/ansible-role-pip3/workflows/CI/badge.svg)](https://github.com/amine7777/ansible-role-pip3/actions)|[![quality](https://img.shields.io/ansible/quality/50498)](https://galaxy.ansible.com/amine7777/pip3)|[![downloads](https://img.shields.io/ansible/role/d/50348)](https://galaxy.ansible.com/amine7777/pip3)|[![Version](https://img.shields.io/github/release/amine7777/ansible-role-pip3.svg)](https://github.com/amine7777/ansible-role-pip3/releases/)|
+|[![travis](https://travis-ci.com/amine7777/ansible-role-terraform.svg?branch=master)](https://travis-ci.com/amine7777/ansible-role-terraform)|[![github](https://github.com/amine7777/ansible-role-terraform/workflows/CI/badge.svg)](https://github.com/amine7777/ansible-role-terraform/actions)|[![quality](https://img.shields.io/ansible/quality/50498)](https://galaxy.ansible.com/amine7777/terraform)|[![downloads](https://img.shields.io/ansible/role/d/50348)](https://galaxy.ansible.com/amine7777/terraform)|[![Version](https://img.shields.io/github/release/amine7777/ansible-role-terraform.svg)](https://github.com/amine7777/ansible-role-terraform/releases/)|
 
-![](pip3.jpg)
+![](terraform.jpg)
 
 Requirements
 ------------
@@ -17,21 +17,21 @@ Requirements
 
 Role Variables
 --------------
-These variables helps to manage pip3 installation.
+These variables helps to manage terraform installation.
 
-You can specify your pip3 version in this variable.
+You can specify your terraform version in this variable.
 ```yaml
-pip3_version: 0.13.1
-pip3_arch: amd64
-pip3_directory_path: /usr/local/bin
+terraform_version: 0.13.1
+terraform_arch: amd64
+terraform_directory_path: /usr/local/bin
 ```
-This is the url where pip3 will be downloaded.
+This is the url where terraform will be downloaded.
 ```yaml
-pip3_download_url: 'https://releases.hashicorp.com/pip3/{{ pip3_version }}/pip3_{{ pip3_version }}_linux_{{ pip3_arch }}.zip'
+terraform_download_url: 'https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_{{ terraform_arch }}.zip'
 ```
 This is the path where packer binary will be stored.
 ```yaml
-pip3_directory_path: /usr/local/bin
+terraform_directory_path: /usr/local/bin
 ```
 
 Example Playbook
@@ -40,7 +40,7 @@ Example Playbook
 ```yaml
 - hosts: all
   roles:
-     - amine7777.pip3
+     - amine7777.terraform
 ```
 
 

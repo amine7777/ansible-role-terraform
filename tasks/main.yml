@@ -1,23 +1,23 @@
 ---
-# tasks file for pip3
+# tasks file for terraform
 - name: Install unzip
   package:
     name: unzip
     state: present
 
-- name: Download and extract pip3
+- name: Download and extract terraform
   unarchive:
-    src: '{{ pip3_download_url }}'
-    dest: '{{ pip3_directory_path }}'
+    src: '{{ terraform_download_url }}'
+    dest: '{{ terraform_directory_path }}'
     remote_src: yes
-    creates: '{{ pip3_directory_path }}/pip3'
+    creates: '{{ terraform_directory_path }}/terraform'
     mode: 0755
 
-- name: Check pip3 version
-  command: pip3 --version
+- name: Check terraform version
+  command: terraform --version
   changed_when: false
-  register: check_pip3
+  register: check_terraform
 
-- name: Display pip3 version
+- name: Display terraform version
   debug:
-    msg: '{{ check_pip3.stdout_lines }}'
+    msg: '{{ check_terraform.stdout_lines }}'

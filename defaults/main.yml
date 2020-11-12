@@ -1,6 +1,6 @@
 ---
-# defaults file for pip3
-pip3_version: 0.13.1
-pip3_arch: amd64
-pip3_directory_path: /usr/local/bin/
-pip3_download_url: 'https://releases.hashicorp.com/pip3/{{ pip3_version }}/pip3_{{ pip3_version }}_linux_{{ pip3_arch }}.zip'
+# defaults file for terraform
+terraform_version: 0.13.1
+terraform_arch: amd64
+terraform_directory_path: /usr/local/bin/
+terraform_download_url: 'https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_{{ terraform_arch }}.zip'

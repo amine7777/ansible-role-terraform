@@ -8,6 +8,6 @@
         cache_valid_time: 3600
       when: ansible_os_family == 'Debian'
 
-    - name: Include ansible-role-pip3
+    - name: Include ansible-role-terraform
       include_role:
         name: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
